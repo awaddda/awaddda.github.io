@@ -176,7 +176,8 @@ h1, h2, h3, p { margin: 0; }
   border: 1px solid var(--line);
   overflow: hidden;
 }
-.card:not(.card--wide) .frame__shot { border-bottom: 0; }
+/* Misma proporción que la foto de Manjares (950×500) para que se vea entera */
+.card:not(.card--wide) .frame__shot { border-bottom: 0; aspect-ratio: 19 / 10; }
 .card--wide .frame__shot { border-radius: 0 0 10px 10px; }
 
 .frame__shot img {
