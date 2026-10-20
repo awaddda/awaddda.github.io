@@ -304,3 +304,140 @@ h1, h2, h3, p { margin: 0; }
   .section { padding-top: 72px; padding-bottom: 72px; }
   .contact { padding-top: 80px; padding-bottom: 80px; }
 }
+
+/* ============================================================
+   Estética propia de cada proyecto
+   Cada tarjeta copia colores, letras y formas de su sitio.
+   ============================================================ */
+
+/* Cripteando: marrón mate, verde yerba, Newsreader + Figtree + DM Mono */
+.card--cripteando {
+  background: #1a130d;
+  border-color: #3e3124;
+  border-radius: 22px;
+  color: #f1eadb;
+  font-family: "Figtree", system-ui, sans-serif;
+}
+.card--cripteando:hover { border-color: #a3c14f; }
+.card--cripteando .frame__bar { background: #2e2318; border-color: #3e3124; }
+.card--cripteando .frame__bar i { background: #5e3a1f; }
+.card--cripteando .frame__bar i:first-child { background: #a3c14f; }
+.card--cripteando .frame__bar span,
+.card--cripteando .label { font-family: "DM Mono", monospace; color: #b2a38b; }
+.card--cripteando .frame__shot,
+.card--cripteando .card__body { border-color: #3e3124; }
+.card--cripteando h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+.card--cripteando .card__body > p { color: #b2a38b; }
+.card--cripteando .tags li {
+  font-family: "Figtree", sans-serif;
+  font-size: .8rem;
+  color: #b2a38b;
+  background: #231a12;
+  border-color: #3e3124;
+}
+.card--cripteando .arrow { border-color: #3e3124; }
+.card--cripteando:hover .arrow { background: #a3c14f; border-color: #a3c14f; color: #1a130d; }
+
+/* Manjares Serranos: papel crudo, naranja de seguridad, Space Grotesk en mayúsculas */
+.card--manjares {
+  background: #f0ede6;
+  border-color: #dcd6ca;
+  border-radius: 16px;
+  color: #141414;
+  font-family: "Inter", system-ui, sans-serif;
+  box-shadow: 0 1px 2px rgba(10,10,10,.04), 0 8px 24px rgba(10,10,10,.06);
+}
+.card--manjares:hover {
+  border-color: #dcd6ca;
+  box-shadow: 0 4px 10px rgba(10,10,10,.06), 0 28px 60px rgba(10,10,10,.13);
+}
+.card--manjares .frame__bar { background: #e8e4dc; border-color: #dcd6ca; }
+.card--manjares .frame__bar i { background: #c9c3b8; }
+.card--manjares .frame__bar span { color: #9a9286; }
+.card--manjares .frame__shot { border-color: #dcd6ca; }
+.card--manjares .card__body { border-color: #dcd6ca; }
+.card--manjares .label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 700 .72rem/1 "Inter", sans-serif;
+  letter-spacing: .08em;
+  color: #ff4a00;
+}
+.card--manjares .label::before {
+  content: "";
+  width: 1.6rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #ff4a00;
+}
+.card--manjares h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+}
+.card--manjares .card__body > p { color: #5c574f; }
+.card--manjares .tags li {
+  font: 600 .68rem/1.4 "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #141414;
+  background: #fff;
+  border-color: #dcd6ca;
+  padding: 6px 12px;
+  box-shadow: 0 1px 2px rgba(10,10,10,.04), 0 4px 10px rgba(10,10,10,.05);
+}
+.card--manjares .arrow { background: #ff4a00; border-color: #ff4a00; color: #fff; }
+.card--manjares:hover .arrow { background: #cc3b00; border-color: #cc3b00; }
+
+/* Turopeo: fondo hueso, panel blanco translúcido, colores del logo */
+.card--turopeo {
+  background: #e9e4dd;
+  border-color: #e9e4dd;
+  border-radius: 13px;
+  color: #383838;
+  font-family: "Inter", system-ui, sans-serif;
+}
+.card--turopeo:hover { border-color: #f89b39; }
+.card--turopeo .frame__bar { background: rgba(255,255,255,.6); border-color: rgba(0,0,0,.06); }
+.card--turopeo .frame__bar i:nth-child(1) { background: #f27363; }
+.card--turopeo .frame__bar i:nth-child(2) { background: #f89b39; }
+.card--turopeo .frame__bar i:nth-child(3) { background: #74c278; }
+.card--turopeo .frame__bar span { color: #888; }
+.card--turopeo .frame__shot { background: #fff; border-color: rgba(0,0,0,.06); }
+.card--turopeo .card__body {
+  margin: 0 20px 20px;
+  padding: 24px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06), 0 20px 60px rgba(0,0,0,.08);
+  flex: 1;
+}
+.card--turopeo .frame { padding-bottom: 20px; }
+.card--turopeo .frame__shot { border-radius: 0 0 10px 10px; }
+.card--turopeo .label {
+  font: 700 .7rem/1.4 "Inter", sans-serif;
+  letter-spacing: .12em;
+  color: #888;
+}
+.card--turopeo h3 { font-weight: 600; letter-spacing: -.02em; }
+.card--turopeo .card__body > p { color: #666; }
+.card--turopeo .tags li {
+  font: 500 .75rem/1.4 "Inter", sans-serif;
+  color: #383838;
+  background: #fff;
+  border: 0;
+  border-left: 3px solid #74c278;
+  border-radius: 6px;
+}
+.card--turopeo .tags li:nth-child(2) { border-left-color: #f27363; }
+.card--turopeo .tags li:nth-child(3) { border-left-color: #f89b39; }
+.card--turopeo .tags li:nth-child(4) { border-left-color: #912791; }
+.card--turopeo .arrow { border: 2px solid #f89b39; color: #f89b39; }
+.card--turopeo:hover .arrow { background: #f89b39; border-color: #f89b39; color: #fff; }
