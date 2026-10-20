@@ -3,75 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Santino Awada — Portafolio</title>
-  <meta name="description" content="Proyectos web de Santino Awada: Cripteando, Manjares Serranos y Turopeo.">
-  <meta property="og:title" content="Santino Awada — Portafolio">
-  <meta property="og:description" content="Proyectos web: Cripteando, Manjares Serranos y Turopeo.">
+  <title>Santino Awada — Desarrollo web</title>
+  <meta name="description" content="Portafolio de Santino Awada: sitios de marca, landing pages y apps web. Proyectos: Cripteando, Manjares Serranos y Turopeo.">
+  <meta name="theme-color" content="#0c0c0d">
+  <meta property="og:title" content="Santino Awada — Desarrollo web">
+  <meta property="og:description" content="Sitios de marca, landing pages y apps web.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="intro">
-    <p class="kicker">Portafolio</p>
-    <h1>Santino Awada</h1>
-    <p class="lede">Hago sitios y juegos web. Acá están los proyectos en los que estoy trabajando.</p>
+  <nav class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">Santino Awada</a>
+      <div class="nav__links">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap" id="top">
+    <p class="badge"><span class="dot"></span>Disponible para proyectos</p>
+    <h1 class="hero__title">Diseño y desarrollo<br><span>sitios web</span> con identidad.</h1>
+    <p class="hero__lede">Soy Santino, desarrollador web en Argentina. Hago sitios de marca, landing pages y apps web rápidas, cuidadas y fáciles de usar.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn btn--ghost" href="mailto:santinoawada@gmail.com">Escribime</a>
+    </div>
   </header>
 
-  <main class="projects">
-    <article class="project">
-      <a class="thumb" href="https://awaddda.github.io/cripteando/" style="--bg:#1a130d">
-        <img src="img/cripteando.png" alt="Captura de Cripteando" loading="lazy">
-      </a>
-      <div class="info">
-        <p class="meta"><span>01</span> Juego web · PWA</p>
-        <h2>Cripteando</h2>
-        <p>Una pista críptica nueva por día, en español rioplatense. Encontrás la definición, descubrís el juego de palabras y la resolvés.</p>
-        <div class="links">
-          <a class="btn" href="https://awaddda.github.io/cripteando/">Ver sitio <span aria-hidden="true">→</span></a>
-          <a class="code" href="https://github.com/awaddda/cripteando">Código</a>
-        </div>
+  <main>
+    <section class="wrap section" id="proyectos">
+      <div class="section__head">
+        <p class="label">01 — Proyectos</p>
+        <h2>Trabajos seleccionados</h2>
       </div>
-    </article>
 
-    <article class="project">
-      <a class="thumb" href="https://awaddda.github.io/manjares-serranos/" style="--bg:#3b2a1e">
-        <img src="img/manjares-serranos.jpg" alt="Embutidos de Manjares Serranos" loading="lazy">
-      </a>
-      <div class="info">
-        <p class="meta"><span>02</span> Sitio de marca · Catálogo</p>
-        <h2>Manjares Serranos</h2>
-        <p>Sitio para una marca de embutidos y salazones curados en las Sierras de Córdoba: catálogo de productos, proceso de elaboración y trazabilidad por lote.</p>
-        <div class="links">
-          <a class="btn" href="https://awaddda.github.io/manjares-serranos/">Ver sitio <span aria-hidden="true">→</span></a>
-          <a class="code" href="https://github.com/awaddda/manjares-serranos">Código</a>
-        </div>
-      </div>
-    </article>
+      <div class="grid">
+        <!-- Cripteando -->
+        <a class="card card--wide reveal" href="https://awaddda.github.io/cripteando/">
+          <div class="frame">
+            <div class="frame__bar"><i></i><i></i><i></i><span>awaddda.github.io/cripteando</span></div>
+            <div class="frame__shot" style="--bg:#1a130d">
+              <img src="img/cripteando.png" alt="Captura de Cripteando" loading="lazy">
+            </div>
+          </div>
+          <div class="card__body">
+            <div class="card__top">
+              <p class="label">App web · PWA · 2026</p>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Cripteando</h3>
+            <p>Juego de palabras con una pista críptica nueva por día, en español rioplatense. Se instala como app, tiene cuentas de usuario, estadísticas y lecciones para aprender a resolver.</p>
+            <ul class="tags"><li>JavaScript</li><li>Firebase</li><li>PWA</li><li>esbuild</li></ul>
+          </div>
+        </a>
 
-    <article class="project">
-      <a class="thumb thumb--logo" href="https://awaddda.github.io/turopeo/" style="--bg:#e9e4dd">
-        <img src="img/turopeo-logo.svg" alt="Logo de Turopeo" loading="lazy">
-      </a>
-      <div class="info">
-        <p class="meta"><span>03</span> Landing · Turismo</p>
-        <h2>Turopeo</h2>
-        <p>Página de lanzamiento para una agencia de viajes que arma recorridos a medida. Fondos de video de destinos como Groenlandia, las Islas Feroe y Shanghái.</p>
-        <div class="links">
-          <a class="btn" href="https://awaddda.github.io/turopeo/">Ver sitio <span aria-hidden="true">→</span></a>
-          <a class="code" href="https://github.com/awaddda/turopeo">Código</a>
-        </div>
+        <!-- Manjares Serranos -->
+        <a class="card reveal" href="https://awaddda.github.io/manjares-serranos/">
+          <div class="frame">
+            <div class="frame__bar"><i></i><i></i><i></i><span>manjares-serranos</span></div>
+            <div class="frame__shot" style="--bg:#3b2a1e">
+              <img src="img/manjares-serranos.jpg" alt="Embutidos de Manjares Serranos" loading="lazy">
+            </div>
+          </div>
+          <div class="card__body">
+            <div class="card__top">
+              <p class="label">Sitio de marca · 2026</p>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Manjares Serranos</h3>
+            <p>Sitio para una marca de embutidos de las Sierras de Córdoba: catálogo de productos, proceso de elaboración y trazabilidad por lote.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+        </a>
+
+        <!-- Turopeo -->
+        <a class="card reveal" href="https://awaddda.github.io/turopeo/">
+          <div class="frame">
+            <div class="frame__bar"><i></i><i></i><i></i><span>turopeo</span></div>
+            <div class="frame__shot frame__shot--logo" style="--bg:#e9e4dd">
+              <img src="img/turopeo-logo.svg" alt="Logo de Turopeo" loading="lazy">
+            </div>
+          </div>
+          <div class="card__body">
+            <div class="card__top">
+              <p class="label">Landing · Turismo · 2026</p>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Turopeo</h3>
+            <p>Página de lanzamiento para una agencia de viajes a medida, con fondos de video de destinos como Groenlandia, las Islas Feroe y Shanghái.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Video</li></ul>
+          </div>
+        </a>
       </div>
-    </article>
+    </section>
+
+    <section class="wrap section about" id="sobre-mi">
+      <div class="section__head">
+        <p class="label">02 — Sobre mí</p>
+        <h2>Del diseño al código, de punta a punta.</h2>
+      </div>
+      <div class="about__grid">
+        <p class="about__text reveal">Me encargo de todo el proceso: entender qué necesita el proyecto, diseñar la experiencia y programarla. Me importa que cada sitio cargue rápido, se vea bien en el celular y tenga una identidad propia, no una plantilla.</p>
+        <ul class="services reveal">
+          <li><span>Sitios de marca</span><small>Presentá tu negocio y tus productos.</small></li>
+          <li><span>Landing pages</span><small>Lanzamientos y campañas que convierten.</small></li>
+          <li><span>Apps y juegos web</span><small>Interactivos, instalables y con cuentas de usuario.</small></li>
+        </ul>
+      </div>
+      <div class="stack reveal">
+        <p class="label">Herramientas</p>
+        <ul class="tags tags--lg"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Firebase</li><li>esbuild</li><li>Git</li><li>GitHub Pages</li></ul>
+      </div>
+    </section>
+
+    <section class="wrap section contact" id="contacto">
+      <p class="label">03 — Contacto</p>
+      <h2 class="contact__title">¿Tenés un proyecto en mente?</h2>
+      <a class="contact__mail" href="mailto:santinoawada@gmail.com">santinoawada@gmail.com <span aria-hidden="true">↗</span></a>
+    </section>
   </main>
 
-  <footer class="outro">
-    <p>¿Querés hablar de un proyecto?</p>
-    <a href="mailto:santinoawada@gmail.com">santinoawada@gmail.com</a>
-    <a href="https://github.com/awaddda">GitHub</a>
+  <footer class="wrap footer">
+    <p>© <span id="year">2026</span> Santino Awada</p>
+    <a href="https://github.com/awaddda">GitHub ↗</a>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
