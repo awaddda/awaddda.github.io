@@ -147,7 +147,7 @@ h1, h2, h3, p { margin: 0; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: border-color .3s, transform .3s;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
 }
 .card:hover { border-color: #3a3a40; transform: translateY(-4px); }
 
@@ -288,13 +288,21 @@ h1, h2, h3, p { margin: 0; }
 .footer a:hover { color: var(--text); }
 
 /* Animación al hacer scroll */
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease, border-color .3s; }
-.js .reveal.is-visible { opacity: 1; transform: none; }
-.js .card.reveal.is-visible:hover { transform: translateY(-4px); }
+/* Es una animación (no una transición) para no pisar los efectos de hover de cada tarjeta.
+   "backwards" la deja terminar sin congelar el transform. */
+.js .reveal:not(.is-visible) { opacity: 0; }
+.js .reveal.is-visible { animation: reveal .7s cubic-bezier(.2, .7, .2, 1) backwards; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal:not(.is-visible) { opacity: 1; }
+  .js .reveal.is-visible { animation: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
 }
 
 /* Celular y tablet */
@@ -468,7 +476,6 @@ h1, h2, h3, p { margin: 0; }
   box-shadow: 8px 8px 0 0 #f0ede8;
   transition: transform .2s, box-shadow .2s;
 }
-.js .card--bitacora.reveal.is-visible:hover,
 .card--bitacora:hover {
   border-color: #f0ede8;
   transform: translate(-3px, -3px);

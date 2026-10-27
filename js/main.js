@@ -13,7 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 // Aparición suave de las secciones al hacer scroll
 if ("IntersectionObserver" in window) {
-  document.documentElement.classList.add("js");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
