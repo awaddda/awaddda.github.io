@@ -216,13 +216,15 @@ h1, h2, h3, p { margin: 0; }
   width: 36px; height: 36px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  transition: background .25s, color .25s, border-color .25s, transform .25s;
+  transition: background .25s, color .25s, border-color .25s;
 }
 .card:hover .arrow {
   background: var(--accent);
   border-color: var(--accent);
-  transform: rotate(45deg);
 }
+/* Gira solo la flecha, la caja queda quieta */
+.arrow__icon { display: block; line-height: 1; transition: transform .25s; }
+.card:hover .arrow__icon { transform: rotate(45deg); }
 
 .card h3 { font-size: 1.75rem; font-weight: 600; letter-spacing: -.03em; line-height: 1.1; }
 .card--wide h3 { font-size: clamp(2rem, 3.5vw, 2.6rem); }
